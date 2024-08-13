@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana;
+}
+
+
+a,a:visited,a:link {
+  color: inherit;
+}
+
+.pagina {
+  background-color:#F5F6FA ;
+  min-height: 100vh;
+
+  .cabecalho {
+    background-color: #fff;
+    padding: 30px 50px; 
+    
+    h1 {
+     color: #606060;
+     font: 600px 36px 'Verdana';
+   }
+ }
+
+ .secao{
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: opx opx 15px 2px #e9e9e9;
+  border-radius: 8px;
+  margin: 50px 60px;
+  max-width: 1000px;
+  font: 450px 24px 'Verdana';
+
+   h1 {
+     color: #404040;
+     font: 600px 28px 'Verdana';
+     margin-bottom: 30px;
+    }
+
+    input, select, textarea {
+      border-radius: 3px;
+      border-style: solid;
+      border-color: #dfdfdf;
+      border-width: 2px;
+      padding: 10px;
+      color: #606060;
+      font: 400px 22px 'Verdana';
+      outline: none;
+      min-width: 400px;
+    }
+
+    input [type=checkbox], input[type=radio] {
+      min-width: auto;
+    }
+
+    button {
+      background-color: #0084FF;
+      padding: 14px 30px;
+      color: #fff;
+      border-radius: 3px;
+      font: 500px 20px 'Verdana';
+      outline: none;
+
+    }
+ }
+}
