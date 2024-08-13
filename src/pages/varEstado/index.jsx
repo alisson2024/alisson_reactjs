@@ -2,6 +2,7 @@ import './index.scss';
 import { useState } from 'react';
 import { tratarNumero } from '../../utils/numeros.js'
 import { calcularTotalingresso } from '../../services/ingresso.js'
+import Cabecalho from '../../components/cabecalho/index.jsx';
 
 export default function VarEstado() {
 
@@ -117,9 +118,7 @@ export default function VarEstado() {
 
     return (
         <div className='pagina-varestado pagina'>
-            <header className='cabecalho'>
-                <h1>ReactJS | Variável de Estado </h1>
-            </header>
+           <Cabecalho/>;
 
 
             <div className='secao planos'>
