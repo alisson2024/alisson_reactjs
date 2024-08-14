@@ -6,9 +6,10 @@ import Cabecalho from '../../components/cabecalho';
 export default function App() {
   return (
     <div className="pagina-app pagina">
-      <Cabecalho />;     
+      <Cabecalho titulo="Estudando ReactJS !!!" />;  
+
       <section className='secao'>
-        <h1>Estudando ReactJS</h1>
+        <h1> Temas </h1>
 
         <ul>
           <li className='ir-a-contato'>

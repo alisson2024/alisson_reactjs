@@ -118,7 +118,7 @@ export default function VarEstado() {
 
     return (
         <div className='pagina-varestado pagina'>
-           <Cabecalho/>;
+           <Cabecalho titulo="ReactJS | VarEstado"/>;
 
 
             <div className='secao planos'>

@@ -20,7 +20,7 @@ function alteroucheck(e){
 
     return (
         <div className='pagina-eventos pagina'>
-           <Cabecalho/>;    
+           <Cabecalho titulo="React | Eventos"/>;    
             <section className='secao'>
                 <h1> Entendendo eventos </h1>
 
