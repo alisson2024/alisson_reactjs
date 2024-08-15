@@ -21,6 +21,9 @@ export default function App() {
           <li>
             <Link to='/varestado'>VarEstado</Link>
           </li>
+          <li>
+            <Link to='/comps'>Componentes</Link>
+          </li>
         </ul>
       </section>
 

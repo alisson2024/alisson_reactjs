@@ -5,7 +5,7 @@ import Naoencontrado from './pages/naoencontrado';
 import Eventos from './pages/eventos';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import VarEstado from './pages/varEstado';
-
+import Comps from './pages/comps';
 
 export default function Navegacao() {
     return (
@@ -16,7 +16,7 @@ export default function Navegacao() {
                 <Route path='/app' element={<App />} />
                 <Route path='/eventos' element={<Eventos />} />
                 <Route path='/varestado' element={<VarEstado />} />
-
+                <Route path='/comps' element={<Comps />} />
 
                 <Route path='*' element={<Naoencontrado />} />
 

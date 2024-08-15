@@ -6,7 +6,7 @@ import Cabecalho from '../../components/cabecalho/index.jsx';
 
 export default function VarEstado() {
 
-    const [contador, setcontador] = useState(0);
+    
     const [Titulos2, settitulos2] = useState('Oie');
     const [Titulos3, settitulos3] = useState('');
     const [marcouOpcaoS4, setmarcouOpcaoS4] = useState(true);
@@ -31,16 +31,7 @@ export default function VarEstado() {
     const [listaPlanos, setListaPlanos] = useState([]);
 
 
-    function aumentar() {
-        if (contador < 20) {
-            setcontador(contador + 1);
-        }
-    }
-    function diminuir() {
-        if (contador > 0) {
-            setcontador(contador - 1);
-        }
-    }
+   
 
     function somarcalculadora() {
         let soma = tratarNumero(num1) + tratarNumero(num2)
@@ -210,17 +201,7 @@ export default function VarEstado() {
                 </div>
             </div>
 
-            <div className='secao'>
-                <h1> contador </h1>
-
-                <div className='cont'>
-                    <button onClick={aumentar}> + </button>
-                    {contador}
-                    <button onClick={diminuir}> - </button>
-                </div>
-
-            </div>
-
+         
             <div className='secao'>
                 <h1>{Titulos2}</h1>
                 <input type="text" value={Titulos2} onChange={e => settitulos2(e.target.value)} />
