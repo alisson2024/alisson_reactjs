@@ -21,9 +21,6 @@ export default function VarEstado() {
     const [cupom, setCupom] = useState('');
     const [totalIng, setTotalIng] = useState(0);
 
-    const [novaMeta, setNovaMeta] = useState('');
-    const [listaMetas, setListaMetas] = useState([]);
-    const [editando, setEditando] = useState(-1);
 
     const [plano, setPlano] = useState('');
     const [situacao, setSituacao] = useState('');
@@ -55,41 +52,6 @@ export default function VarEstado() {
         setTotalIng(tota);
     }
 
-    function adicionarMeta() {
-
-        if (novaMeta != '') {
-
-            if (editando == -1) {
-                setListaMetas([...listaMetas, novaMeta]);
-                setNovaMeta('');
-            }
-            else {
-                listaMetas[editando] = novaMeta;
-                setListaMetas([...listaMetas])
-                setNovaMeta('');
-                setEditando(-1);
-            }
-        }
-
-
-    }
-
-    function teclaApertada(e) {
-        if (e.key == 'Enter') {
-            adicionarMeta();
-        }
-    }
-
-    function removerMeta(pos) {
-        listaMetas.splice(pos, 1);
-        setListaMetas([...listaMetas]);
-
-    }
-
-    function alterarMeta(pos) {
-        setNovaMeta(listaMetas[pos]);
-        setEditando(pos);
-    }
 
 
     function adicionarPlano() {
@@ -137,24 +99,6 @@ export default function VarEstado() {
                 </div>
             </div>
 
-            <div className='secao metas'>
-                <h1> Metas para os proximos 5 anos</h1>
-
-                <div>
-                    <input type="text" placeholder='Digite sua meta aqui' onKeyUp={teclaApertada} value={novaMeta} onChange={e => setNovaMeta(e.target.value)} />
-                    <button onClick={adicionarMeta}> Adicionar </button>
-                </div>
-
-                <ul>
-                    {listaMetas.map((item, pos) =>
-                        <li key={pos}>
-                            <img src="/assets/images/editar.png" alt="" width='15px' onClick={() => alterarMeta(pos)} /> &nbsp;
-                            <img src="/assets/images/remove.png" alt="" width='15px' onClick={() => removerMeta(pos)} /> &nbsp;
-                            {item}
-                        </li>
-                    )}
-                </ul>
-            </div>
 
 
             <div className='secao ingresso'>
