@@ -11,4 +11,25 @@
            list-style-type: none;
         }
      }
+
+
+     .planos {
+      .entrada {
+         display: flex;
+         flex-direction: column;
+         align-items: start;
+         gap: 20px;
+
+      }
+
+      .lista {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 40px;
+         margin-top: 30px;
+      }
+       
+      
+
+   }
 }

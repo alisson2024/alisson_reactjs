@@ -4,11 +4,17 @@ import { useState } from 'react';
 import Cabecalho from '../../components/cabecalho';
 import Contador from '../../components/contador';
 import ItemMeta from '../../components/itemMeta';
+import ItemPlano from '../../components/itemPlano';
 
 export default function Comps(){
     const [novaMeta, setNovaMeta] = useState('');
     const [listaMetas, setListaMetas] = useState([]);
     const [editando, setEditando] = useState(-1);
+
+    const [plano, setPlano] = useState('');
+    const [situacao, setSituacao] = useState('');
+    const [cor, setCor] = useState('');
+    const [listaPlanos, setListaPlanos] = useState([]);
 
 
 
@@ -47,6 +53,22 @@ export default function Comps(){
         setNovaMeta(listaMetas[pos]);
         setEditando(pos);
     }
+
+    function adicionarPlano() {
+        let novoPlano = {
+            titulo: plano,
+            tempo: situacao,
+            tema: cor
+        }
+
+        setListaPlanos([...listaPlanos, novoPlano])
+
+        setPlano('')
+        setSituacao('')
+        setCor('')
+
+    }
+
     
     return(
         <div className='pagina-comps pagina'>
@@ -78,6 +100,26 @@ export default function Comps(){
                     )}
                 </ul>
             </div>
+
+            
+            <div className='secao planos'>
+                <h1> Meus planos atuais</h1>
+
+                <div className='entrada'>
+                    <input type="text" placeholder='Meu plano aqui' value={plano} onChange={e => setPlano(e.target.value)} />
+                    <input type="text" placeholder='Situação do plano aqui' value={situacao} onChange={e => setSituacao(e.target.value)} />
+                    <input type="text" placeholder='Cor de identificação' value={cor} onChange={e => setCor(e.target.value)} />
+                    <button onClick={adicionarPlano}> Adicionar Planos </button>
+                </div>
+
+                <div className='lista'>
+                    {listaPlanos.map((item, pos) =>
+                       <ItemPlano item={item}/>
+                    )}
+
+                </div>
+            </div>
+
         </div>
     )
 }

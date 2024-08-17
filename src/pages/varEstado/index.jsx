@@ -6,7 +6,7 @@ import Cabecalho from '../../components/cabecalho/index.jsx';
 
 export default function VarEstado() {
 
-    
+
     const [Titulos2, settitulos2] = useState('Oie');
     const [Titulos3, settitulos3] = useState('');
     const [marcouOpcaoS4, setmarcouOpcaoS4] = useState(true);
@@ -22,13 +22,8 @@ export default function VarEstado() {
     const [totalIng, setTotalIng] = useState(0);
 
 
-    const [plano, setPlano] = useState('');
-    const [situacao, setSituacao] = useState('');
-    const [cor, setCor] = useState('');
-    const [listaPlanos, setListaPlanos] = useState([]);
 
 
-   
 
     function somarcalculadora() {
         let soma = tratarNumero(num1) + tratarNumero(num2)
@@ -54,50 +49,11 @@ export default function VarEstado() {
 
 
 
-    function adicionarPlano() {
-        let novoPlano = {
-            titulo: plano,
-            tempo: situacao,
-            tema: cor
-        }
-
-        setListaPlanos([...listaPlanos, novoPlano])
-
-        setPlano('')
-        setSituacao('')
-        setCor('')
-
-    }
 
     return (
         <div className='pagina-varestado pagina'>
-           <Cabecalho titulo="ReactJS | VarEstado"/>;
+            <Cabecalho titulo="ReactJS | VarEstado" />;
 
-
-            <div className='secao planos'>
-                <h1> Meus planos atuais</h1>
-
-                <div className='entrada'>
-                    <input type="text" placeholder='Meu plano aqui' value={plano} onChange={e => setPlano(e.target.value)} />
-                    <input type="text" placeholder='Situação do plano aqui' value={situacao} onChange={e => setSituacao(e.target.value)} />
-                    <input type="text" placeholder='Cor de identificação' value={cor} onChange={e => setCor(e.target.value)} />
-                    <button onClick={adicionarPlano}> Adicionar Planos </button>
-                </div>
-
-                <div className='lista'>
-                    {listaPlanos.map((item, pos )=>
-                        <div className='plano' key={pos}>
-                            <div className='cor' style={{backgroundColor: item.tema}}>&nbsp;</div>
-                            <div>
-                                <h1> {item.titulo}</h1>
-                                <h2> {item.tempo} </h2>
-                            </div>
-                        </div>
-
-                    )}
-
-                </div>
-            </div>
 
 
 
@@ -145,7 +101,7 @@ export default function VarEstado() {
                 </div>
             </div>
 
-         
+
             <div className='secao'>
                 <h1>{Titulos2}</h1>
                 <input type="text" value={Titulos2} onChange={e => settitulos2(e.target.value)} />
