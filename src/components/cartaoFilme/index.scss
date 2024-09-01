@@ -40,4 +40,21 @@ position: relative;
     .c-18{
         background-color: black;
     }
-}
+
+    .estreia{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 7px;
+        border-radius: 100px;
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        font: 500 17px 'arial';
+    
+    .estrela{
+            color: yellow;
+        }
+    }
+}  
+    
