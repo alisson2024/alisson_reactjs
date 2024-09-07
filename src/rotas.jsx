@@ -8,6 +8,7 @@ import VarEstado from './pages/varEstado';
 import Comps from './pages/comps';
 import RenderizacaoCondiconal from './pages/renderizacaoCondicional';
 import Efeitos from './pages/efeitos';
+import ChamadaApi from './pages/chamadaApi';
 
 export default function Navegacao() {
     return (
@@ -21,6 +22,7 @@ export default function Navegacao() {
                 <Route path='/comps' element={<Comps />} />
                 <Route path='/renderizacaocondicional' element={<RenderizacaoCondiconal />} />
                 <Route path='/efeitos' element={<Efeitos />} />
+                <Route path='/chamadaapi' element={<ChamadaApi />} />
 
 
 

@@ -31,6 +31,9 @@ export default function App() {
           <li>
             <Link to='/Efeitos'>Efeitos</Link>
           </li>
+          <li>
+            <Link to="/chamadaapi">Chamada APIs</Link>
+          </li>
         </ul>
       </section>
 
